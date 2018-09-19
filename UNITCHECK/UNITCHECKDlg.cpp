@@ -2078,8 +2078,9 @@ void CUNITCHECKDlg::OnBnClickedButton32()
 		tagname.Format("m_2560_checkTag%d",i+1);
 		pinname.Format("m_2560_checkPin%d",i+1);
 		::GetPrivateProfileString(_T("2560_tag"),tagname,"",temp.GetBuffer(255),255,megafilepath);
-		theApp.checktag[inputnum]=temp;
 		temp.ReleaseBuffer();
+		theApp.checktag[inputnum]=temp;
+		
 		theApp.checkpin[inputnum]=::GetPrivateProfileInt(_T("2560_pin"),pinname,-1,megafilepath);
 		if(theApp.checkpin[i]<-1 ||theApp.checkpin[i]>69)
 		{

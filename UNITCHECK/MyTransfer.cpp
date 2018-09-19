@@ -26,13 +26,11 @@ void CMyTransfer::GetStatus(MyString str)
 	{
 		file<<"recv:"<<str.toBitString()<<endl;
 		oldstr=str;
-		slock=true;
 		for(int i=0;i<syncBytenum;i++)
 		{
 			byte2Bit(str.data[i],status+i*8);
 
 		}
-		slock=false;
 
 	}
 	if(*(chip+2)==0)

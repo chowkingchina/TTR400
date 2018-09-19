@@ -269,7 +269,7 @@ void CTPJ10Test::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_EDIT136, m_d_2_pianmr);
 	DDX_Text(pDX, IDC_EDIT137, m_d_2_glsmrwaitTime);
 	DDX_Text(pDX, IDC_EDIT138, m_d_2_zeroCorrected);
-	DDV_MinMaxLong(pDX, m_d_2_zeroCorrected, 0, 10);
+	DDV_MinMaxLong(pDX, m_d_2_zeroCorrected, 0, 14);
 	DDV_MinMaxLong(pDX, m_d_2_qinxie, 0, 180);
 }
 
