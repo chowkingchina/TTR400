@@ -617,7 +617,7 @@ void CMyTools::IvSleep(long delaytime)
 void CMyTools::IvSleep(long delaytime,CJinDuTiao &jdt,CString inst)
 {
 	int i=0;
-	if(delaytime==0)
+	if(delaytime<=0)
 		return;
 	float perstep=1.0*delaytime/10;
 	while(i<delaytime*10)
@@ -628,7 +628,7 @@ void CMyTools::IvSleep(long delaytime,CJinDuTiao &jdt,CString inst)
 		{
 			int perst=(int)perstep;
 			if(i%(perst)==0)
-				jdt.SetJinDu(i/perst,inst);
+				jdt.SetJinDu((int)(i/perstep),inst);
 
 		}
 			
